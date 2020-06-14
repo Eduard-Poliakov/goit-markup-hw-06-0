@@ -446,5 +446,64 @@
         <div><p>2020 | Developed by GoIT Students</p></div>
       </div>
     </footer>
+    <!-- Форма -->
+    <form class="subscription">
+      <p>Оставьте свои данные, мы вам перезвоним</p>
+      <div class="field">
+        <input
+          type="text"
+          name="user-name"
+          id="name"
+          class="field-entry"
+          placeholder=" "
+        />
+        <label for="name" class="field-text">Имя</label>
+        <svg class="field-icon">
+          <use href="./images/sprite2.svg#form-name"></use>
+        </svg>
+      </div>
+      <div class="field">
+        <input
+          type="tel"
+          name="tel"
+          id="tel"
+          class="field-entry"
+          placeholder=" "
+        />
+        <label for="tel" class="field-text">Телефон</label>
+        <svg class="field-icon">
+          <use href="./images/sprite2.svg#form-tel"></use>
+        </svg>
+      </div>
+      <div class="field">
+        <input
+          type="mail"
+          name="mail"
+          id="mail"
+          class="field-entry"
+          placeholder=" "
+        />
+        <label for="mail" class="field-text">Почта</label>
+        <svg class="field-icon">
+          <use href="./images/sprite2.svg#form-mail"></use>
+        </svg>
+      </div>
+      <div class="field field-style">
+        <textarea
+          name="comment"
+          class="field-entry field-comment"
+          id="comment"
+          placeholder="Комментарий"
+        ></textarea>
+      </div>
+      <div>
+        <input type="checkbox" id="conditions" />
+        <label for="conditions" class="conditions"
+          >Соглашаюсь с рассылкой и принимаю
+          <a href="#">Условия договора</a></label
+        >
+      </div>
+      <button type="submit" class="button">Отправить</button>
+    </form>
   </body>
 </html>

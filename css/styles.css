@@ -607,9 +607,115 @@ address li:last-child {
   margin-left: 10px;
 }
 
-/* Модальное окно */
+/* Форма */
 
-/* Портфолио */
+.subscription {
+  width: 528px;
+  height: 581px;
+  background: #ffffff;
+  box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 1px 3px rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
+  padding: 40px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.subscription p {
+  margin-bottom: 30px;
+  margin-top: 0;
+
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+}
+
+.field {
+  position: relative;
+  height: 40px;
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+.field-entry {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 40px;
+  padding-right: 16px;
+  margin: 0;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+
+.field-text {
+  position: absolute;
+  top: 50%;
+  left: 42px;
+  transform: translateY(-50%);
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.01em;
+  color: var(--secondary-color);
+}
+
+.field-comment {
+  left: 16px;
+  resize: none;
+  height: 100%;
+}
+
+.field-style {
+  width: 448px;
+  height: 120px;
+  margin-bottom: 20px;
+}
+
+.field-entry:focus ~ .field-icon,
+.field-entry:not(:placeholder-shown) + .field-icon {
+  fill: var(--akcent-color);
+}
+
+.field-entry:focus + .field-text,
+.field-entry:not(:placeholder-shown) + .field-text {
+  transform: translate(-26px, -40px);
+  color: var(--akcent-color);
+}
+
+.field-entry:focus {
+  outline-color: var(--akcent-color);
+}
+
+.field-icon {
+  position: absolute;
+  top: 50%;
+  left: 16px;
+  transform: translateY(-50%);
+  height: 18px;
+  width: 18px;
+}
+.conditions {
+  margin-bottom: 30px;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: var(--secondary-color);
+}
+
+.conditions a {
+  text-decoration: underline;
+}
+
+form button {
+  display: block;
+  margin-top: 30px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  margin-left: auto;
+  margin-right: auto;
+}
 
 /* .backdrop {
   position: fixed;
@@ -630,6 +736,8 @@ address li:last-child {
   left: 50%;
   transform: translate(-50%, -50%);
 } */
+
+/* Портфолио */
 
 section.portfolio {
   padding-top: 94px;
