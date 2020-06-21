@@ -60,7 +60,9 @@
             эффективные решения <br />
             для вашего бизнеса
           </h1>
-          <button type="button" class="button">Заказать услугу</button>
+          <button type="button" class="button data-modal-open">
+            Заказать услугу
+          </button>
         </div>
       </section>
       <!-- Особенности -->
@@ -175,7 +177,7 @@
                 width="270"
                 height="260"
               />
-              <h3>John Smith</h3>
+              <h3>Николай Кучеренко</h3>
               <p>Product Designer</p>
               <ul class="social">
                 <li>
@@ -215,7 +217,7 @@
                 width="270"
                 height="260"
               />
-              <h3>Marta Stewart</h3>
+              <h3>Ольга Иванова</h3>
               <p>Frontend Developer</p>
               <ul class="social">
                 <li>
@@ -255,7 +257,7 @@
                 width="270"
                 height="260"
               />
-              <h3>Robert Jakis</h3>
+              <h3>Андрей Шевченко</h3>
               <p>Marketing</p>
               <ul class="social">
                 <li>
@@ -295,7 +297,7 @@
                 width="270"
                 height="260"
               />
-              <h3>Martin Doe</h3>
+              <h3>Иван Николаев</h3>
               <p>UI Designer</p>
               <ul class="social">
                 <li>
@@ -446,64 +448,77 @@
         <div><p>2020 | Developed by GoIT Students</p></div>
       </div>
     </footer>
-    <!-- Форма -->
-    <form class="subscription">
-      <p>Оставьте свои данные, мы вам перезвоним</p>
-      <div class="field">
-        <input
-          type="text"
-          name="user-name"
-          id="name"
-          class="field-entry"
-          placeholder=" "
-        />
-        <label for="name" class="field-text">Имя</label>
-        <svg class="field-icon">
-          <use href="./images/sprite2.svg#form-name"></use>
-        </svg>
+    <div class="backdrop is-hidden data-modal">
+      <div class="modal">
+        <!-- Форма -->
+        <form class="subscription">
+          <button class="close data-modal-close">
+            <svg class="close-icon">
+              <use href="./images/sprite2.svg#form-close"></use>
+            </svg>
+          </button>
+          <p>Оставьте свои данные, мы вам перезвоним</p>
+          <div class="field">
+            <input
+              type="text"
+              name="user-name"
+              id="name"
+              class="field-entry"
+              placeholder=" "
+            />
+            <label for="name" class="field-text">Имя</label>
+            <svg class="field-icon">
+              <use href="./images/sprite2.svg#form-name"></use>
+            </svg>
+          </div>
+          <div class="field">
+            <input
+              type="tel"
+              name="tel"
+              id="tel"
+              class="field-entry"
+              placeholder=" "
+            />
+            <label for="tel" class="field-text">Телефон</label>
+            <svg class="field-icon">
+              <use href="./images/sprite2.svg#form-tel"></use>
+            </svg>
+          </div>
+          <div class="field">
+            <input
+              type="mail"
+              name="mail"
+              id="mail"
+              class="field-entry"
+              placeholder=" "
+            />
+            <label for="mail" class="field-text">Почта</label>
+            <svg class="field-icon">
+              <use href="./images/sprite2.svg#form-mail"></use>
+            </svg>
+          </div>
+          <div class="field field-style">
+            <textarea
+              name="comment"
+              class="field-entry field-comment"
+              id="comment"
+              placeholder="Комментарий"
+            ></textarea>
+          </div>
+          <div class="check-box">
+            <label class="conditions">
+              <input type="checkbox" />
+              <span class="icon-check"></span>
+              Соглашаюсь с рассылкой и принимаю
+              <a href="#">Условия договора</a>
+            </label>
+          </div>
+          <button type="submit" class="button">
+            Отправить
+          </button>
+        </form>
       </div>
-      <div class="field">
-        <input
-          type="tel"
-          name="tel"
-          id="tel"
-          class="field-entry"
-          placeholder=" "
-        />
-        <label for="tel" class="field-text">Телефон</label>
-        <svg class="field-icon">
-          <use href="./images/sprite2.svg#form-tel"></use>
-        </svg>
-      </div>
-      <div class="field">
-        <input
-          type="mail"
-          name="mail"
-          id="mail"
-          class="field-entry"
-          placeholder=" "
-        />
-        <label for="mail" class="field-text">Почта</label>
-        <svg class="field-icon">
-          <use href="./images/sprite2.svg#form-mail"></use>
-        </svg>
-      </div>
-      <div class="field field-style">
-        <textarea
-          name="comment"
-          class="field-entry field-comment"
-          id="comment"
-          placeholder="Комментарий"
-        ></textarea>
-      </div>
-      <div>
-        <input type="checkbox" id="conditions" />
-        <label for="conditions" class="conditions"
-          >Соглашаюсь с рассылкой и принимаю
-          <a href="#">Условия договора</a></label
-        >
-      </div>
-      <button type="submit" class="button">Отправить</button>
-    </form>
+    </div>
+    <script src="./js/modal.js"></script>
   </body>
 </html>

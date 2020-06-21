@@ -610,6 +610,7 @@ address li:last-child {
 /* Форма */
 
 .subscription {
+  position: relative;
   width: 528px;
   height: 581px;
   background: #ffffff;
@@ -660,18 +661,22 @@ address li:last-child {
   line-height: 1.14;
   letter-spacing: 0.01em;
   color: var(--secondary-color);
-}
-
-.field-comment {
-  left: 16px;
-  resize: none;
-  height: 100%;
+  transition-property: transform;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .field-style {
   width: 448px;
   height: 120px;
   margin-bottom: 20px;
+}
+
+form textarea {
+  resize: none;
+  left: 16px;
+  height: 100%;
+  width: 100%;
 }
 
 .field-entry:focus ~ .field-icon,
@@ -686,7 +691,8 @@ address li:last-child {
 }
 
 .field-entry:focus {
-  outline-color: var(--akcent-color);
+  border-color: var(--akcent-color);
+  outline-color: rgba(0, 0, 0, 0);
 }
 
 .field-icon {
@@ -696,9 +702,14 @@ address li:last-child {
   transform: translateY(-50%);
   height: 18px;
   width: 18px;
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .conditions {
-  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
@@ -707,6 +718,7 @@ address li:last-child {
 
 .conditions a {
   text-decoration: underline;
+  color: var(--akcent-color);
 }
 
 form button {
@@ -717,25 +729,89 @@ form button {
   margin-right: auto;
 }
 
-/* .backdrop {
+.close {
+  position: absolute;
+  top: 8px;
+  left: 490px;
+  width: 30px;
+  height: 30px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  margin: 0;
+  padding: 6px;
+  box-shadow: none;
+  background-color: var(--primary-background-color);
+}
+
+.close-icon {
+  height: 100%;
+  width: 100%;
+  color: #000000;
+
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.close:focus,
+.close:hover {
+  fill: var(--akcent-color);
+}
+.icon-check {
+  content: " ";
+  display: inline-block;
+  width: 16px;
+  height: 15px;
+  border: 2px solid var(--primary-color);
+  border-radius: 2px;
+  margin-right: 8px;
+  transition-property: background-color, border-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.check-box input[type="checkbox"] {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0px;
+  border: 0px;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.check-box input[type="checkbox"]:checked + .icon-check {
+  background-color: var(--akcent-color);
+  background-image: url(..//images/icon-check.svg);
+  background-size: contain;
+  background-origin: border-box;
+  border-color: var(--akcent-color);
+}
+
+.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.backdrop {
   position: fixed;
-  top 0;
+  top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  translate: ;
   background-color: rgba(0, 0, 0, 0.2);
 }
 
 .modal {
   position: absolute;
-  width: 600px;
-  height: 400px;
+  width: 528px;
+  height: 581px;
   background-color: var(--primary-background-color);
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-} */
+}
 
 /* Портфолио */
 
